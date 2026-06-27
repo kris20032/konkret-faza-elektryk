@@ -610,15 +610,15 @@ section{padding-block:clamp(64px,8vw,128px)}
 
 
 /* === WCAG override (skórka stal: jasna żółć NIGDY jako tekst na jasnym tle; akcent = tło/kreska/na ciemnym) === */
-:root{ --muted:#5C636D; }                                   /* AA na paper i paper-2 */
-.eyebrow{ color:var(--ink-soft); }                          /* eyebrow domyślnie ciemny (jasne sekcje) */
-.cta .eyebrow, .awaria .eyebrow{ color:var(--accent); }     /* na ciemnym tle akcent OK */
-.svc .ic{ color:var(--ink-soft); }                          /* "Krok 01/02/03" ciemne */
-.svc-row .num{ color:var(--ink-soft); }                     /* numery 01-06 ciemne (kreska ::before zostaje żółta) */
-.fu-cta{ color:var(--ink); }                                /* "Wycena": sygnał = pogrubienie + strzałka */
+:root{ --muted:#5C636D; }
+.eyebrow{ color:var(--ink-soft); }
+.cta .eyebrow, .awaria .eyebrow{ color:var(--accent); }
+.svc .ic{ color:var(--ink-soft); }
+.svc-row .num{ color:var(--ink-soft); }
+.fu-cta{ color:var(--ink); }
 .fu-cta:hover{ color:var(--ink); text-decoration:underline; }
-.btn-ghost:hover{ color:var(--ink); }                       /* hover ghost na jasnym: ciemny tekst + żółta ramka */
-.hf-ghost:hover{ color:#fff; }                              /* ZABEZPIECZENIE: ghost na ciemnym hero zostaje biały */
+.btn-ghost:hover{ color:var(--ink); }
+.hf-ghost:hover{ color:#fff; }
 .obszar-list li:hover{ border-color:var(--accent); color:var(--ink-soft); }
-.info-row .ic{ background:var(--ink); color:var(--accent); }/* żółta ikona na ciemnym kółku */
+.info-row .ic{ background:var(--ink); color:var(--accent); }
 .info-row a.val:hover{ color:var(--ink); text-decoration:underline; }
