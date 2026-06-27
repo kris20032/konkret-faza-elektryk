@@ -1,202 +1,167 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KONKRET FAZA — usługi elektryczne | Maków Mazowiecki</title>
-<meta name="description" content="KONKRET FAZA — usługi elektryczne w Makowie Mazowieckim i okolicy. Instalacje, pomiary, rozdzielnice, oświetlenie i usuwanie usterek. Bezpłatna wycena." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KONKRET FAZA - Elektryk · Maków Mazowiecki</title>
+<meta name="description" content="KONKRET FAZA - usługi elektryczne, Maków Mazowiecki i okolice. Instalacje, przyłącza, rozdzielnice, naprawa usterek i awarii, montaż oświetlenia i osprzętu. Pomiary i uprawnienia, wycena przed pracą, sprawny dojazd. Zadzwoń i umów termin.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  /* === PALETA — dostosuj do branży === */
-  :root{ --cream:#f3ece1; --cream-2:#e5d8c4; --espresso:#241c15; --espresso-2:#473a2e; --gold:#9a5a26; --gold-d:#7a4318; --rose:#d8c3a2; --muted:#766a59; --white:#fffdf8; --shadow:0 18px 50px -22px rgba(36,28,21,.5); }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:'Inter',sans-serif;color:var(--espresso);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.serif{font-family:'Archivo','Inter',sans-serif;font-weight:600;line-height:1.15}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:999px;font-weight:500;font-size:.95rem;transition:.25s;cursor:pointer;border:1px solid transparent}
-  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;box-shadow:0 10px 24px -10px rgba(169,118,63,.7)}
-  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(169,118,63,.8)}
-  .btn-dark{background:var(--espresso);color:#fff}
-  .btn-dark:hover{background:var(--espresso-2)}
-  header{position:sticky;top:0;z-index:50;background:rgba(250,245,239,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(192,145,95,.18)}
-  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .logo{font-family:'Archivo','Inter',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:.5px}
-  .logo span{color:var(--gold-d)}
-  .nav-links{display:flex;align-items:center;gap:2rem}
-  .nav-links a{font-size:.92rem;color:var(--espresso-2);transition:.2s}
-  .nav-links a:hover{color:var(--gold-d)}
-  .nav-links .btn{padding:.6rem 1.2rem}
-  .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--espresso)}
-  .hero{position:relative;overflow:hidden;background:
-      radial-gradient(circle at 78% 18%,rgba(231,201,184,.55),transparent 46%),
-      radial-gradient(circle at 12% 88%,rgba(192,145,95,.30),transparent 40%),
-      linear-gradient(160deg,#fdf8f3 0%,#f1e2d4 100%)}
-  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:84px 0 92px}
-  .eyebrow{display:inline-block;letter-spacing:3px;font-size:.74rem;font-weight:600;color:var(--gold-d);text-transform:uppercase;margin-bottom:18px}
-  .hero h1{font-size:clamp(3rem,7vw,5.4rem);font-weight:700;margin-bottom:18px}
-  .hero h1 em{font-style:normal;color:var(--gold-d)}
-  .hero p.lead{font-size:1.12rem;color:var(--espresso-2);max-width:30rem;margin-bottom:30px}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-  .hero-art{position:relative;height:430px;border-radius:24px;overflow:hidden;box-shadow:var(--shadow);
-      background:url('img/hero.jpg') center 22%/cover no-repeat, linear-gradient(150deg,#efd9c6,#c0915f)}
-  .hero-art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,37,.04),rgba(58,44,37,.2))}
-  .strip{background:var(--espresso);color:#f3e7db}
-  .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;padding:20px 24px;font-size:.92rem}
-  .strip span{display:inline-flex;align-items:center;gap:.55rem}
-  .strip b{color:var(--gold)}
-  section{padding:90px 0}
-  .head{text-align:center;max-width:42rem;margin:0 auto 54px}
-  .head .eyebrow{margin-bottom:12px}
-  .head h2{font-size:clamp(2rem,4vw,2.8rem)}
-  .head p{color:var(--muted);margin-top:14px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .card{background:var(--white);border:1px solid rgba(192,145,95,.16);border-radius:18px;padding:30px 26px;transition:.28s}
-  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:rgba(192,145,95,.4)}
-  .card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,var(--cream-2),var(--rose));margin-bottom:18px}
-  .card h3{font-size:1.2rem;margin-bottom:8px}
-  .card p{color:var(--muted);font-size:.94rem}
-  .price-note{text-align:center;margin-top:34px;color:var(--muted);font-size:.92rem}
-  .about{background:linear-gradient(180deg,var(--cream),#f5ebe1)}
-  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
-  .about-art{height:360px;border-radius:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;display:grid;place-items:center;color:#fff;text-align:center;
-      background:url('img/about.jpg') center/cover no-repeat,linear-gradient(140deg,#3a2c25,#5a463c)}
-  .about-art::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(58,44,37,.42),rgba(58,44,37,.68))}
-  .about-art .q{position:relative;z-index:2;font-family:'Archivo','Inter',sans-serif;font-style:italic;font-size:1.5rem;padding:34px;line-height:1.4;text-shadow:0 3px 16px rgba(0,0,0,.45)}
-  .about-art .q span{color:var(--gold)}
-  .about-txt h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:18px}
-  .about-txt p{color:var(--espresso-2);margin-bottom:16px}
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .tile{aspect-ratio:1/1;border-radius:16px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff;font-weight:600;box-shadow:0 12px 30px -16px rgba(58,44,37,.5);background-color:#c9a88f;background-size:cover;background-position:center;transition:.3s}
-  .tile:hover{transform:translateY(-4px)}
-  .tile span{position:relative;z-index:2;font-size:1rem;letter-spacing:.3px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
-  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,44,37,.05) 45%,rgba(58,44,37,.72))}
-  .reviews{background:var(--espresso);color:#f3e7db;text-align:center}
-  .reviews .stars{color:var(--gold);font-size:1.5rem;letter-spacing:4px;margin-bottom:14px}
-  .reviews h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:14px}
-  .reviews p{color:#cdbcae;max-width:36rem;margin:0 auto 28px}
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
-  .info .row{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(192,145,95,.2)}
-  .info .row .ic{font-size:1.3rem;margin-top:2px}
-  .info .row a{font-weight:500}
-  .info .row a:hover{color:var(--gold-d)}
-  .map{min-height:340px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(192,145,95,.2)}
-  .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.15) contrast(1.02)}
-  .contact-cta{margin-top:28px}
-  footer{background:#2c211c;color:#cdbcae;text-align:center;padding:34px 24px;font-size:.88rem}
-  footer .logo{font-size:1.2rem;color:#f3e7db;margin-bottom:8px}
-  footer a{color:var(--gold)}
-  .reveal{opacity:0;transform:translateY(22px);transition:.7s cubic-bezier(.2,.7,.2,1)}
-  .reveal.in{opacity:1;transform:none}
-  @media(max-width:880px){
-    .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr}
-    .hero-art{height:300px;order:-1}
-    .grid,.gallery{grid-template-columns:repeat(2,1fr)}
-    .nav-links{position:fixed;inset:72px 0 auto 0;flex-direction:column;background:var(--cream);padding:24px;gap:18px;border-bottom:1px solid rgba(192,145,95,.2);display:none}
-    .nav-links.open{display:flex}
-    .burger{display:block}
-  }
-  @media(max-width:560px){.grid,.gallery{grid-template-columns:1fr}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<header><div class="wrap"><nav>
-  <div class="logo">KONKRET <span>FAZA</span></div>
-  <div class="nav-links" id="menu">
-    <a href="#oferta">Oferta</a><a href="#onas">O nas</a><a href="#galeria">Galeria</a><a href="#kontakt">Kontakt</a>
-    <a class="btn btn-gold" href="#kontakt">Bezpłatna wycena</a>
-  </div>
-  <button class="burger" id="burger" aria-label="Menu">☰</button>
-</nav></div></header>
 
-<section class="hero"><div class="wrap hero-inner">
-  <div>
-    <span class="eyebrow">Usługi elektryczne · Maków Mazowiecki</span>
-    <h1>Instalacje elektryczne<br><em>zrobione konkretnie.</em></h1>
-    <p class="lead">KONKRET FAZA — usługi elektryczne w Makowie Mazowieckim i okolicy. Instalacje, pomiary, rozdzielnice i usuwanie usterek — solidnie, bezpiecznie i na czas.</p>
-    <div class="hero-cta">
-      <a class="btn btn-gold" href="#kontakt">Bezpłatna wycena</a>
-      <a class="btn btn-dark" href="tel:+48506547445">Zadzwoń: +48 506 547 445</a>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand brand-has-logo" href="index.html"><img class="brand-logo" src="img/logo.png" alt="KONKRET FAZA"></a>
+    <nav class="nav-links">
+      <a href="oferta.html">Oferta</a>
+      <a href="realizacje.html">Realizacje</a>
+      <a href="o-nas.html">O nas</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="tel:+48506547445" class="btn btn-accent">Zadzwoń +48 506 547 445</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero-fach">
+  <img class="hf-photo" src="img/hero.jpg" alt="KONKRET FAZA">
+  <div class="hf-panel">
+      <span class="hf-kicker">Usługi elektryczne · Maków Mazowiecki</span>
+      <h1 class="hf-title">Instalacje elektryczne, zrobione konkretnie</h1>
+      <a class="hf-phone" href="tel:+48506547445"><span class="hf-phone-lab">Zadzwoń teraz</span><span class="hf-phone-num"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> +48 506 547 445</span></a>
+      <div class="hf-actions">
+        <a href="kontakt.html" class="btn btn-accent">Bezpłatna wycena <span class="arr">→</span></a>
+        <a href="tel:+48506547445" class="btn btn-ghost hf-ghost">Zadzwoń +48 506 547 445</a>
+      </div>
+  </div>
+</section>
+<section class="fach-promise">
+  <div class="wrap">
+    <ul class="fp-row reveal"><li>Bezpłatna wycena</li><li>Dojazd: Maków Mazowiecki i okolice</li><li>Gwarancja na robociznę</li></ul>
+  </div>
+</section>
+<section class="awaria">
+  <div class="wrap">
+      <div class="reveal">
+        <h3>Awaria? Nie czekaj.</h3>
+        <p>Szybki dojazd na pilne zgłoszenia.</p>
+      </div>
+      <a class="btn btn-accent" href="tel:+48506547445">Zadzwoń teraz: +48 506 547 445</a>
+  </div>
+</section>
+<section class="proces fachowcy">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">Jak pracujemy</span>
+      <h2>Wiesz, na czym stoisz - na każdym etapie</h2>
+      <p>Prosty, przewidywalny proces. Bez niespodzianek i bez naciągania.</p>
+    </div>
+    <ol class="proces-line">
+      <li class="reveal"><span class="pno">01</span><h3>Bezpłatna wycena</h3><p>Przyjeżdżamy, oglądamy, doradzamy. Bez opłat i bez zobowiązań.</p></li>
+      <li class="reveal"><span class="pno">02</span><h3>Kosztorys i termin</h3><p>Jasna cena i termin na piśmie - zanim cokolwiek ruszy.</p></li>
+      <li class="reveal"><span class="pno">03</span><h3>Realizacja</h3><p>Robimy zgodnie ze sztuką, na czas, dbając o porządek.</p></li>
+      <li class="reveal"><span class="pno">04</span><h3>Odbiór i gwarancja</h3><p>Sprzątamy po sobie i dajemy gwarancję na robociznę.</p></li>
+    </ol>
+  </div>
+</section>
+<section class="gateways-band">
+  <div class="wrap">
+    <div class="gateways">
+      <a href="oferta.html" class="gateway reveal"><img src="img/g2.jpg" alt="Instalacje elektryczne" loading="lazy"><span class="g-ttl">Instalacje elektryczne</span></a>
+      <a href="oferta.html" class="gateway reveal"><img src="img/g3.jpg" alt="Rozdzielnice i zabezpieczenia" loading="lazy"><span class="g-ttl">Rozdzielnice i zabezpieczenia</span></a>
+      <a href="oferta.html" class="gateway reveal"><img src="img/g4.jpg" alt="Naprawa usterek i awarii" loading="lazy"><span class="g-ttl">Naprawa usterek i awarii</span></a>
     </div>
   </div>
-  <div class="hero-art" role="img" aria-label="KONKRET FAZA — Usługi Elektryczne"></div>
-</div></section>
-
-<div class="strip"><div class="wrap">
-  <span>✦ <b>Instalacje</b>&nbsp;elektryczne</span>
-  <span>✦ <b>Pomiary</b>&nbsp;i odbiory</span>
-  <span>✦ <b>Usterki</b>&nbsp;pogotowie</span>
-  <span>✦ <b>Maków Maz.</b>&nbsp;i okolice</span>
-</div></div>
-
-<section id="oferta"><div class="wrap">
-  <div class="head reveal"><span class="eyebrow">Oferta</span><h2>Co dla Ciebie zrobimy</h2><p>Kompleksowo — od nowej instalacji po szybkie usunięcie usterki.</p></div>
-  <div class="grid">
-    <div class="card reveal"><div class="ic">✶</div><h3>Instalacje elektryczne</h3><p>Nowe instalacje i modernizacja — w domach, mieszkaniach, lokalach i firmach.</p></div>
-    <div class="card reveal"><div class="ic">❀</div><h3>Pomiary i odbiory</h3><p>Pomiary elektryczne, protokoły i odbiory — zgodnie z przepisami, na czas.</p></div>
-    <div class="card reveal"><div class="ic">✦</div><h3>Rozdzielnice i zabezpieczenia</h3><p>Montaż i wymiana rozdzielnic, zabezpieczeń i tablic — bezpiecznie i z głową.</p></div>
-    <div class="card reveal"><div class="ic">♥</div><h3>Oświetlenie i osprzęt</h3><p>Montaż oświetlenia (w tym LED), gniazd, włączników i osprzętu — estetycznie i trwale.</p></div>
-    <div class="card reveal"><div class="ic">◆</div><h3>Usuwanie usterek</h3><p>Szybka diagnoza i naprawa awarii — żeby prąd wrócił bez zbędnego czekania.</p></div>
-    <div class="card reveal"><div class="ic">✿</div><h3>Inteligentny dom i PV</h3><p>Sterowanie oświetleniem, instalacje pod fotowoltaikę i ładowarki — nowoczesne rozwiązania.</p></div>
-  </div>
-  <p class="price-note">Pełny cennik i terminy: <a href="#kontakt" style="color:var(--gold-d);font-weight:500">Bezpłatna wycena →</a></p>
-</div></section>
-
-<section class="about" id="onas"><div class="wrap about-grid">
-  <div class="about-art reveal"><div class="q">Prąd nie wybacza skrótów — <span>u nas jest zrobiony konkretnie</span>.</div></div>
-  <div class="about-txt reveal">
-    <span class="eyebrow">O nas</span><h2>Elektryk, na którym można polegać</h2>
-    <p>KONKRET FAZA to usługi elektryczne w Makowie Mazowieckim i okolicy. Robimy instalacje od podstaw, modernizacje, pomiary i naprawy — dla domów, mieszkań i firm.</p><p>Solidnie, bezpiecznie i bez ściemy — dokładnie tak, jak sugeruje nazwa. Przyjedziemy, doradzimy i bezpłatnie wycenimy zakres prac.</p>
-    <a class="btn btn-dark" href="#kontakt" style="margin-top:8px">Odwiedź nas</a>
-  </div>
-</div></section>
-
-<section id="galeria"><div class="wrap">
-  <div class="head reveal"><span class="eyebrow">Galeria</span><h2>Nasze realizacje</h2><p>Wybrane prace elektryczne — instalacje, rozdzielnice i pomiary.</p></div>
-  <div class="gallery">
-    <div class="tile reveal" style="background-image:url('img/g1.jpg')"><span>Rozdzielnice i instalacje</span></div>
-    <div class="tile reveal" style="background-image:url('img/g2.jpg')"><span>Gniazda i osprzęt</span></div>
-    <div class="tile reveal" style="background-image:url('img/g3.jpg')"><span>Pomiary i odbiory</span></div>
-    <div class="tile reveal" style="background-image:url('img/g4.jpg')"><span>Precyzyjny montaż</span></div>
-    <div class="tile reveal" style="background-image:url('img/g5.jpg')"><span>Solidnie i bezpiecznie</span></div>
-    <div class="tile reveal" style="background-image:url('img/g6.jpg')"><span>Usuwanie usterek</span></div>
-  </div>
-</div></section>
-
-<section class="reviews"><div class="wrap reveal">
-  <div class="stars">✦&nbsp;&nbsp;✦&nbsp;&nbsp;✦</div><h2>Robota, która po prostu działa</h2><p>Instalacje i naprawy dla mieszkańców Makowa Mazowieckiego i okolic. Zadzwoń — przyjedziemy, doradzimy i bezpłatnie wycenimy.</p>
-  <a class="btn btn-gold" href="#kontakt">Skontaktuj się z nami</a>
-</div></section>
-
-<section id="kontakt" class="about"><div class="wrap">
-  <div class="head reveal"><span class="eyebrow">Zapraszamy</span><h2>Kontakt i rezerwacja</h2></div>
-  <div class="contact-grid">
-    <div class="info reveal">
-      <div class="row"><span class="ic">📍</span><div><b>Obszar</b><p>Maków Mazowiecki i okolice</p></div></div>
-      <div class="row"><span class="ic">📞</span><div><b>Telefon</b><p><a href="tel:+48506547445">+48 506 547 445</a></p></div></div>
-      <div class="row"><span class="ic">🗓️</span><div><b>Wycena</b><p>Bezpłatna wycena — zadzwoń, opisz zakres, przyjedziemy.</p></div></div>
-      <div class="row"><span class="ic">⏰</span><div><b>Godziny</b><p>Pon–Sob, po umowie telefonicznej</p></div></div>
-      <div class="contact-cta"><a class="btn btn-gold" href="#kontakt">Bezpłatna wycena</a></div>
+</section>
+<section class="fach-uslugi">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Co robimy</span>
+      <h2>Zakres usług</h2>
+      <p>Dom, mieszkanie, firma czy nowa budowa - zajmujemy się tematem od początku do końca. Powiedz, co się dzieje, a wycenimy i umówimy termin. Przy awarii ruszamy bez zwlekania.</p>
     </div>
-    <div class="map reveal"><iframe src="https://maps.google.com/maps?q=KONKRET+FAZA+Us%C5%82ugi+Elektryczne+Mak%C3%B3w+Mazowiecki&z=15&output=embed" loading="lazy" title="Mapa — KONKRET FAZA — Usługi Elektryczne"></iframe></div>
+    <ul class="fu-list">
+      <li class="fu-row reveal"><div class="fu-name">Instalacje elektryczne</div><div class="fu-desc">Kładziemy nowe instalacje w domach, mieszkaniach i firmach - od projektu i bruzd po podłączenie i odbiór.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
+      <li class="fu-row reveal"><div class="fu-name">Rozdzielnice i zabezpieczenia</div><div class="fu-desc">Składamy i modernizujemy rozdzielnice, dokładamy zabezpieczenia różnicowoprądowe i przepięciowe - żeby instalacja chroniła ludzi i sprzęt.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
+      <li class="fu-row reveal"><div class="fu-name">Naprawa usterek i awarii</div><div class="fu-desc">Wybija bezpiecznik, iskrzy gniazdko, gaśnie światło? Szukamy przyczyny i usuwamy ją na miejscu, a nie tylko zaklejamy objaw.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
+      <li class="fu-row reveal"><div class="fu-name">Gniazdka, włączniki, osprzęt</div><div class="fu-desc">Wymieniamy i dokładamy gniazda, włączniki i punkty - równo, pewnie i tak, żeby pasowały do wnętrza.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
+      <li class="fu-row reveal"><div class="fu-name">Oświetlenie i LED</div><div class="fu-desc">Montujemy oświetlenie wewnątrz i na zewnątrz, taśmy i halogeny LED, lampy z czujnikiem - światło tam, gdzie ma być.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
+      <li class="fu-row reveal"><div class="fu-name">Pomiary i przeglądy</div><div class="fu-desc">Wykonujemy pomiary instalacji i protokoły, robimy przeglądy okresowe - żeby uprzedzić usterkę, zanim narobi szkód.</div><a class="fu-cta" href="kontakt.html">Wycena <span class="arr">→</span></a></li>
+    </ul>
+    <div style="margin-top:var(--space-7)" class="reveal"><a href="oferta.html" class="btn btn-ghost">Pełna oferta <span class="arr">→</span></a></div>
   </div>
-</div></section>
+</section>
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Realizacje</span>
+      <h2>Nasze realizacje</h2>
+      <p>Kawałek tego, co robimy na co dzień - od rozdzielnicy i instalacji po gotowy, równo zrobiony punkt.</p>
+    </div>
+    <div class="gallery">
+      <div class="tile t-two3 reveal"><img src="img/g5.jpg" alt="Instalacje od podstaw" loading="lazy"><div class="cap">Instalacje od podstaw<small>Nowe instalacje w domach, mieszkaniach i firmach - od bruzd po podłączenie i odbiór.</small></div></div>
+      <div class="tile t-third reveal"><img src="img/g6.jpg" alt="Rozdzielnice i zabezpieczenia" loading="lazy"><div class="cap">Rozdzielnice i zabezpieczenia<small>Montaż i modernizacja rozdzielnic, zabezpieczenia różnicowoprądowe i przepięciowe.</small></div></div>
+      <div class="tile t-third reveal"><img src="img/g7.jpg" alt="Przeglądy i pomiary" loading="lazy"><div class="cap">Przeglądy i pomiary<small>Pomiary elektryczne i przeglądy instalacji - również do ubezpieczenia.</small></div></div>
+      <div class="tile t-third reveal"><img src="img/g8.jpg" alt="Modernizacja i naprawa" loading="lazy"><div class="cap">Modernizacja i naprawa<small>Wymiana starej instalacji, usuwanie usterek i awarii na miejscu.</small></div></div>
+      <div class="tile t-third reveal"><img src="img/g9.jpg" alt="Biały montaż i osprzęt" loading="lazy"><div class="cap">Biały montaż i osprzęt<small>Gniazda, włączniki i oświetlenie - równo, pewnie i estetycznie.</small></div></div>
+    </div>
+    <div style="margin-top:var(--space-7)" class="reveal"><a href="realizacje.html" class="btn btn-accent">Pełna galeria <span class="arr">→</span></a></div>
+  </div>
+</section>
+<section class="obszar">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="eyebrow">Obszar działania</span>
+      <h2>Dojeżdżamy do Ciebie</h2>
+    </div>
+    <ul class="obszar-list reveal"><li class="is-home">Maków Mazowiecki</li><li>Różan</li><li>Krasnosielc</li><li>Płoniawy-Bramura</li><li>Sypniewo</li><li>Karniewo</li><li>Czerwonka</li><li>Rzewnie</li><li>+ okolice</li></ul>
+  </div>
+</section>
+<section class="cta">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Współpraca</span>
+      <h2>Potrzebujesz fachowca? Wycenimy za darmo.</h2>
+      <p>Zadzwoń lub napisz - przyjedziemy, obejrzymy i podamy jasną cenę. Bez zobowiązań.</p>
+    </div>
+    <div class="cta-actions reveal">
+      <a href="kontakt.html" class="btn btn-light">Bezpłatna wycena <span class="arr">→</span></a>
+      <a href="tel:+48506547445" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.3)">+48 506 547 445</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <div class="logo">KONKRET <span style="color:var(--gold)">FAZA</span></div>
-  <p>Maków Mazowiecki i okolice · +48 506 547 445</p>
-  <p style="margin-top:6px;opacity:.7">© 2026 KONKRET FAZA — Usługi Elektryczne</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">KONKRET FAZA</div>
+        <p>Od wymiany gniazdka po całą instalację w domu czy firmie.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Nawigacja</h4>
+        <a href="oferta.html">Oferta</a>
+        <a href="realizacje.html">Realizacje</a>
+        <a href="o-nas.html">O nas</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+48506547445">+48 506 547 445</a>
+        <p>Nowa 4, 06-200 Maków Mazowiecki</p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 KONKRET FAZA</span>
+      <span>Projekt strony: Krzysztof Brzeziński</span>
+    </div>
+  </div>
 </footer>
+<div class="sticky-call"><a class="sc-call" href="tel:+48506547445"><svg class="ico-tel" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1l-2.23 2.2Z" fill="currentColor"/></svg> Zadzwoń</a><a class="sc-quote" href="kontakt.html">Bezpłatna wycena</a></div>
 
-<script>
-  var b=document.getElementById('burger'),m=document.getElementById('menu');
-  b.addEventListener('click',function(){m.classList.toggle('open')});
-  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open')})});
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-</script>
+<script src="assets/main.js"></script>
 </body>
 </html>
